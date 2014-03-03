@@ -1,0 +1,12 @@
+---
+- name: add 10gen repo file
+  template: src=repo.j2 dest=/etc/yum.repos.d/10gen.repo
+  tags: mongodb
+
+- name: install mongodb
+  yum: name=mongo-10gen-server state=present
+  tags: mongodb
+
+- name: configure mongodb
+  template: src=mongod.conf.j2 dest=/etc/mongod.conf
+  tags: mongodb
