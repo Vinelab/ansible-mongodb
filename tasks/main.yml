@@ -10,3 +10,7 @@
 - name: configure mongodb
   template: src=mongod.conf.j2 dest=/etc/mongod.conf
   tags: mongodb
+
+- name: run mongodb
+  shell: /usr/bin/mongod --config /etc/mongod.conf
+  tags: mongodb
