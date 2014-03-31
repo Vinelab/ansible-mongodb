@@ -12,5 +12,5 @@
   tags: mongodb
 
 - name: run mongodb
-  shell: /usr/bin/mongod --config /etc/mongod.conf creates=/var/lib/mongo/mongod.lock
+  service: name=mongod state=started
   tags: mongodb
