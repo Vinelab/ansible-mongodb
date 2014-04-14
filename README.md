@@ -1,17 +1,22 @@
 # Ansible MongoDB
-Install MongoDB on Centos/Red Hat
+Install MongoDB on Centos/Red Hat/Fedora
 
 ## Installation
-Clone this repository inside your ```roles``` directory
+- Clone this repository inside your ```roles``` directory
+or add as submodule: `git submodule add git@github.com:Vinelab/ansible-mongodb roles/mongodb`
+
+- In your playbook:
+
+```yaml
+roles:
+  - mongodb
+```
 
 ## Usage
-There must be an ```app``` var with ```mongodb``` inside it defined as follows:
 
-```
+```yaml
 vars:
-  app:
-      mongodb:
-        dbpath: /var/lib/mongo
-````
 
-> you may also specify ```app:``` in a separate YAML file and include it in ```vars_files```
+  mongodb:
+    dbpath: /var/lib/mongo
+````
