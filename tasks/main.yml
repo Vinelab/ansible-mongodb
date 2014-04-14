@@ -12,5 +12,5 @@
   tags: mongodb
 
 - name: run mongodb
-  service: name=mongod state=started
+  service: name=mongod state=started enabled=yes
   tags: mongodb
